@@ -2,8 +2,13 @@ cmake_minimum_required(VERSION 3.14)
 project(ImageOrganizer VERSION 1.0 LANGUAGES CXX)
 
 add_executable(ImageOrganizer main.cpp)
-find_package(exiv2 CONFIG REQUIRED) # 找
-target_link_libraries(ImageOrganizer PRIVATE Exiv2::exiv2lib)  # 用
+
+find_package(exiv2 CONFIG REQUIRED)
+find_package(MediaInfoLib CONFIG REQUIRED)
+find_package(ZenLib CONFIG REQUIRED)
+
+target_link_libraries(ImageOrganizer PRIVATE Exiv2::exiv2lib mediainfo zen)  # 用
+
 set_target_properties(ImageOrganizer PROPERTIES
     CXX_STANDARD 23
     CXX_STANDARD_REQUIRED YES
