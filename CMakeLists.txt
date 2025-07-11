@@ -7,10 +7,10 @@ find_package(exiv2 CONFIG REQUIRED)
 find_package(MediaInfoLib CONFIG REQUIRED)
 find_package(ZenLib CONFIG REQUIRED)
 
-target_link_libraries(ImageOrganizer PRIVATE Exiv2::exiv2lib mediainfo zen)  # 用
+target_link_libraries(ImageOrganizer PRIVATE Exiv2::exiv2lib mediainfo)  # 用
 
 set_target_properties(ImageOrganizer PROPERTIES
-    CXX_STANDARD 23
+    CXX_STANDARD 17
     CXX_STANDARD_REQUIRED YES
 )
 
