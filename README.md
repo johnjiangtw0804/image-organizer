@@ -1,6 +1,7 @@
 # Intro
 
-This is a simple CLI tool that organizes iPhone images and videos by the time they were taken.
+This is a simple CLI tool that organizes iPhone images and videos by the date they were taken.
 
-- For images: it uses EXIF DateTimeOriginal if available.
-- Output folders are named `YYYY-MM-DD` and are not tracked by Git.
+- **Images:** Uses EXIF `DateTimeOriginal` if available.
+- **Videos:** Uses MediaInfo `Recorded_Date`, `Encoded_Date`, or `Tagged_Date`.
+- **Output:** Organizes files into folders named `YYYY-MM-DD`. These folders are ignored by Git.
